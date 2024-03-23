@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Catch The Bus</title>
+  <link rel="stylesheet" href="style2.css">
+</head>
+<body>
+  <h1>Catch the Bus</h1>
+  <div class="search-container">
+    <h2>Search by Bus ID:</h2>
+    <form action="/find-bus-by-id" method="get">
+      <div class="form-group">
+        <label for="busId">Bus ID:</label>
+        <input type="number" name="busId" id="busId" required>
+      </div>
+      <button type="submit">Find Bus</button>
+    </form>
+    <h2>Search by Stops:</h2>
+    <form action="/find-bus-by-stops" method="get">
+      <div class="form-group">
+        <label for="fromStop">From Stop:</label>
+        <input type="text" name="fromStop" id="fromStop" required>
+      </div>
+      <div class="form-group">
+        <label for="toStop">To Stop:</label>
+        <input type="text" name="toStop" id="toStop" required>
+      </div>
+      <button type="submit">Find Buses</button>
+    </form>
+  </div>
+</body>
+</html>

@@ -1,0 +1,52 @@
+body {
+    font-family: sans-serif;
+    margin: 0;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #f0f0f0;
+  }
+  
+  .container {
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    max-width: 400px;
+    width: 100%;
+    position: relative;
+  }
+  
+  h2 {
+    text-align: center;
+    margin: 0;
+    font-size: 2em;
+    color: #4CAF50;
+  }
+  
+  .buttons {
+    margin-top: 20px;
+  }
+  
+  .button {
+    display: block; /* Change to block for stacking */
+    padding: 10px 0; /* Adjust padding */
+    background-color: #4CAF50;
+    color: white;
+    text-decoration: none;
+    border-radius: 3px;
+    margin-bottom: 10px; /* Margin between buttons */
+    transition: background-color 0.3s;
+    width: 100%; /* Take up full width */
+  }
+  
+  .button:last-child {
+    margin-bottom: 0; /* Remove margin from last button */
+  }
+  
+  .button:hover {
+    background-color: #45A049;
+  }
+  
