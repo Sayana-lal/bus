@@ -8,15 +8,7 @@
 </head>
 <body>
   <h1>Catch the Bus</h1>
-  <div class="search-container">
-    <h2>Search by Bus ID:</h2>
-    <form id="busIdForm" action="/find-bus-by-id" method="get">
-      <div class="form-group">
-        <label for="busId">Bus ID:</label>
-        <input type="number" name="busId" id="busId" required>
-      </div>
-      <button type="submit">Find Bus</button>
-    </form>
+  
     <h2>Search by Stops:</h2>
     <form id="stopsForm" action="/find-bus-by-stops" method="get">
       <div class="form-group">
@@ -32,12 +24,7 @@
   </div>
 
   <script>
-    document.getElementById("busIdForm").addEventListener("submit", function(event) {
-      event.preventDefault(); // Prevent form submission
-      // Redirect the user to busid.html
-      window.location.href = "busid.html";
-    });
-
+ 
     document.getElementById("stopsForm").addEventListener("submit", function(event) {
       event.preventDefault(); // Prevent form submission
       // Redirect the user to fromto.html
