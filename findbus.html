@@ -10,25 +10,15 @@
   <h1>Catch the Bus</h1>
   <div class="search-container">
     <h2>Search by Bus ID:</h2>
-    <form action="/find-bus-by-id" method="get">
+    <form id="busIdForm" action="/find-bus-by-id" method="get">
       <div class="form-group">
         <label for="busId">Bus ID:</label>
         <input type="number" name="busId" id="busId" required>
       </div>
       <button type="submit">Find Bus</button>
-      <script>
-        document.addEventListener("submit", function(event) {
-          event.preventDefault(); // Prevent form submission
-          
-          // Perform login validation (for demonstration, assume always successful)
-          // You can add your validation logic here, such as checking credentials against a database
-          // If the login is successful, redirect the user to findbus.html
-          window.location.href = "busid.html";
-        });
-      </script>
     </form>
     <h2>Search by Stops:</h2>
-    <form action="/find-bus-by-stops" method="get">
+    <form id="stopsForm" action="/find-bus-by-stops" method="get">
       <div class="form-group">
         <label for="fromStop">From Stop:</label>
         <input type="text" name="fromStop" id="fromStop" required>
@@ -38,17 +28,21 @@
         <input type="text" name="toStop" id="toStop" required>
       </div>
       <button type="submit">Find Bus</button>
-      <script>
-        document.addEventListener("submit", function(event) {
-          event.preventDefault(); // Prevent form submission
-          
-          // Perform login validation (for demonstration, assume always successful)
-          // You can add your validation logic here, such as checking credentials against a database
-          // If the login is successful, redirect the user to findbus.html
-          window.location.href = "fromto.html";
-        });
-      </script>
     </form>
   </div>
+
+  <script>
+    document.getElementById("busIdForm").addEventListener("submit", function(event) {
+      event.preventDefault(); // Prevent form submission
+      // Redirect the user to busid.html
+      window.location.href = "busid.html";
+    });
+
+    document.getElementById("stopsForm").addEventListener("submit", function(event) {
+      event.preventDefault(); // Prevent form submission
+      // Redirect the user to fromto.html
+      window.location.href = "fromto.html";
+    });
+  </script>
 </body>
 </html>
