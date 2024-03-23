@@ -40,43 +40,14 @@
     }
   </style>
 </head>
-<body>
+<body onload="showDetails()">
   <div class="container">
     <h2>Bus Stand Details</h2>
-    <button class="btn" onclick="showDetails('A')">Bus Stand A</button>
-    <button class="btn" onclick="showDetails('B')">Bus Stand B</button>
-    <button class="btn" onclick="showDetails('C')">Bus Stand C</button>
-    <div id="details">
-      <!-- Details will be displayed here -->
-    </div>
+    <button class="btn" onclick="showStandDetails('A')">Bus Stand A</button>
+    <button class="btn" onclick="showStandDetails('B')">Bus Stand B</button>
+    <button class="btn" onclick="showStandDetails('C')">Bus Stand C</button>
+    <div id="details"></div>
   </div>
-  <script>
-    function showDetails(stand) {
-      var detailsContainer = document.getElementById("details");
-      var details = "";
-
-      // Example details, replace with actual details
-      var operatingHours = "";
-      var ticketsBooked = 0; // Example value, replace with actual data
-      var requiredBuses = Math.ceil(ticketsBooked / 50); // Calculate required buses
-      
-      if (stand === 'A') {
-        operatingHours = "00:00 - 24:00";
-      } else if (stand === 'B') {
-        operatingHours = "00:00 - 24:00";
-      } else if (stand === 'C') {
-        operatingHours = "00:00 - 24:00";
-      }
-
-      details += "<h3>Bus Stand " + stand + "</h3>";
-      details += "<p>Operating Hours: " + operatingHours + "</p>";
-      details += "<p>Tickets Booked: " + ticketsBooked + "</p>";
-      details += "<p>Required Buses: " + requiredBuses + "</p>";
-
-      detailsContainer.innerHTML = details;
-    }
-</script>
-
-    
+  <script src="details.js"></script>
 </body>
 </html>
